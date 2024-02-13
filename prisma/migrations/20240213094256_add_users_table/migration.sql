@@ -1,0 +1,15 @@
+-- CreateTable
+CREATE TABLE `Users` (
+    `ID` INTEGER NOT NULL AUTO_INCREMENT,
+    `Name` VARCHAR(100) NOT NULL,
+    `Email` VARCHAR(100) NOT NULL,
+    `Password` VARCHAR(100) NOT NULL,
+    `CreatedTime` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `CreatedBy` VARCHAR(50) NOT NULL,
+    `LastModifiedTime` DATETIME(3) NULL,
+    `LastModifiedBy` VARCHAR(50) NULL,
+    `TimeStamp` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+
+    UNIQUE INDEX `Users_Email_key`(`Email`),
+    PRIMARY KEY (`ID`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
